@@ -1,0 +1,32 @@
+# Activities on pg. 127.
+
+sandwich_orders = ['club', 'pastrami', 'cuban', 'pastrami', 'rueben', 'pastrami']
+
+finished_sandwiches = []
+
+# while sandwhich_orders:
+# 	completed = sandwhich_orders.pop()
+# 	finished_sandwhiches.append(completed)
+# 	print(f'I made your {completed} sandwhich.')
+		
+# print('The following sandwhiches are ready for pickup: \n')
+# for value in finished_sandwhiches:
+# 	print(f'{value.title()} sandwhich')
+
+print('The deli has run out of pastrami, sorry!\n')
+while 'pastrami' in sandwich_orders:
+	sandwich_orders.remove('pastrami')
+
+for sandwich in sandwich_orders:
+	print(f'I made your {sandwich} sandwich.')
+	finished_sandwiches.append(sandwich)
+
+while sandwich_orders:
+	for sandwich in sandwich_orders:
+		sandwich_orders.remove(sandwich)
+
+print('\nThe following sandwiches are read for pickup: \n')
+for sandwich in finished_sandwiches:
+	print(f'{sandwich.title()} sandwich')
+
+print(sandwich_orders)

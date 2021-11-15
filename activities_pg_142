@@ -1,0 +1,53 @@
+# Activities pg. 41
+
+# 8-6
+
+# def city_country(city, country):
+# 	"""Takes name of city and its country and returns it as a string"""
+# 	string = f'{city.title()}, {country.title()}'
+# 	return string
+
+# example = city_country('akron', 'United States of america')
+# print(example)
+
+# 8-7
+
+# def make_album(artist_name, album_title, number_of_songs = None):
+# 	"""Function will make an album"""
+# 	if number_of_songs:
+# 		album = {'name': artist_name, 'title': album_title, 'number': number_of_songs}
+# 		return album
+# 	else:	
+# 		album = {'name': artist_name, 'title': album_title}
+# 		return album
+
+
+# album1 = make_album('shinedown', 'MONSTERS', 12)
+# print(album1)
+
+# 8-8
+
+def make_album(artist_name, album_title, number_of_songs = None):
+	"""Function will make an album"""
+
+	if number_of_songs:
+		album = {'name': artist_name, 'title': album_title, 'number': number_of_songs}
+		return album
+	else:	
+		album = {'name': artist_name, 'title': album_title}
+		return album
+
+
+while True:
+	print('Please enter the name of an artist.')
+	print("Enter 'q' at any time to quit: ")
+	artist_name = input('Artist: ')
+	if artist_name == 'q':
+		break
+	else:	
+		album_title = input('Album: ')
+		if album_title == 'q':
+			break
+		else:
+			album1 = make_album(artist_name, album_title)
+			print(album1)
