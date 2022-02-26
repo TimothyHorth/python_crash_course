@@ -1,0 +1,3 @@
+In Python you can create lists and dictionaries to store data.
+In Python you can open and read files.
+In Python you can manipulate strings.

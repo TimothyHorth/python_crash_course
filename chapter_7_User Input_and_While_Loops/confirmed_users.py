@@ -1,0 +1,40 @@
+# # Start with users that need to be verified,
+# # and an empty list to hold confirmed users.
+
+# unconfirmed_users = ['alice', 'brian', 'candace']
+# confirmed_users = []
+
+# # Verify each user until there are no more uncofirmed users.
+# # Move each verified user into the list of confirmed users.
+
+# while unconfirmed_users:
+# 	current_user = unconfirmed_users.pop()
+
+# 	print(f'Verifying user: {current_user.title()}')
+# 	confirmed_users.append(current_user)
+
+# # Display all confirmed users.
+# print('\nThe following users have been confirmed:')
+# for user in confirmed_users:
+# 	print(f'{user.title()}')
+
+
+# Making it so the the order of unconfirmed_users remains throughout
+
+unconfirmed_users = ['alice', 'brian', 'candace']
+confirmed_users = []
+
+# Verify each user until there are no more uncofirmed users.
+# Move each verified user into the list of confirmed users.
+
+while unconfirmed_users:
+	current_user = unconfirmed_users[0]
+	unconfirmed_users.remove(unconfirmed_users[0])
+
+	print(f'Verifying user: {current_user.title()}')
+	confirmed_users.append(current_user)
+
+# Display all confirmed users.
+print('\nThe following users have been confirmed:')
+for user in confirmed_users:
+	print(f'{user.title()}')
